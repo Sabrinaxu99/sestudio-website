@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>赛斯工作室 SEStudio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <button class="lang-toggle" onclick="toggleLang()">English</button>
+
+  <header>
+    <img src="logo.jpg" alt="SEStudio Logo" style="max-width:120px; margin-bottom:20px;">
+    <h1 data-cn="赛斯工作室 SEStudio" data-en="SEStudio">赛斯工作室 SEStudio</h1>
+    <p data-cn="让每一个梦想，都被认真对待。" data-en="Every dream deserves to be taken seriously.">让每一个梦想，都被认真对待。</p>
+    <p data-cn="留学 · 移民 · 国际义工 · 高端定制服务" data-en="Study Abroad · Immigration · Volunteering · Premium Services">留学 · 移民 · 国际义工 · 高端定制服务</p>
+  </header>
+
+  <section>
+    <h2 data-cn="联系我们 · Contact Us" data-en="Contact Us">联系我们 · Contact Us</h2>
+    <p data-cn="欢迎填写以下表单，我们将在24小时内与您联系。" data-en="Please fill out the form below. We'll contact you within 24 hours.">欢迎填写以下表单，我们将在24小时内与您联系。</p>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <label data-cn="姓名" data-en="Name">姓名</label>
+      <input type="text" name="name" required />
+      <label data-cn="邮箱" data-en="Email">邮箱</label>
+      <input type="email" name="email" required />
+      <label data-cn="留言内容" data-en="Message">留言内容</label>
+      <textarea name="message" rows="4" required></textarea>
+      <button type="submit" data-cn="提交" data-en="Submit">提交</button>
+    </form>
+    <div style="margin-top:30px;">
+      <p data-cn="扫码添加微信：" data-en="Scan to add WeChat:">扫码添加微信：</p>
+      <img src="wechat.png" alt="WeChat QR Code" style="max-width:200px;">
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 SEStudio 版权所有 ｜ All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
