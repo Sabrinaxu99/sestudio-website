@@ -2,43 +2,73 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>赛斯工作室 SEStudio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <button class="lang-toggle" onclick="toggleLang()">English</button>
-
-  <header>
-    <img src="logo.jpg" alt="SEStudio Logo" style="max-width:120px; margin-bottom:20px;">
-    <h1 data-cn="赛斯工作室 SEStudio" data-en="SEStudio">赛斯工作室 SEStudio</h1>
-    <p data-cn="让每一个梦想，都被认真对待。" data-en="Every dream deserves to be taken seriously.">让每一个梦想，都被认真对待。</p>
-    <p data-cn="留学 · 移民 · 国际义工 · 高端定制服务" data-en="Study Abroad · Immigration · Volunteering · Premium Services">留学 · 移民 · 国际义工 · 高端定制服务</p>
+  <header class="banner" id="home">
+    <div class="overlay">
+      <h1>赛斯工作室 SEStudio</h1>
+      <p class="slogan">让每一个梦想，都被认真对待。</p>
+      <p class="sub-slogan">留学 · 移民 · 国际义工 · 高端定制服务</p>
+      <p class="tagline">专注全球资源整合，提供一站式方案，让你的选择更简单。</p>
+    </div>
   </header>
 
-  <section>
-    <h2 data-cn="联系我们 · Contact Us" data-en="Contact Us">联系我们 · Contact Us</h2>
-    <p data-cn="欢迎填写以下表单，我们将在24小时内与您联系。" data-en="Please fill out the form below. We'll contact you within 24 hours.">欢迎填写以下表单，我们将在24小时内与您联系。</p>
+  <section id="about">
+    <h2>我们是谁 · About SES</h2>
+    <p>赛斯工作室（SEStudio）是一家总部位于葡萄牙的综合型中介机构，由资深团队联合创立，专注于留学、投资移民、国际义工、跨文化交流等多个国际化领域。</p>
+    <p>我们致力于为客户提供包录取、全流程托管与高端定制化服务，以严谨专业的态度、全球化的视野，助力每一个客户实现梦想。</p>
+  </section>
+
+  <section id="services">
+    <h2>核心服务 · What We Do</h2>
+    <ul>
+      <li><strong>全球留学：</strong> 覆盖英国、美国、葡萄牙、澳大利亚、西班牙等热门国家，量身定制申请方案，支持包录取服务。</li>
+      <li><strong>投资移民：</strong> 提供欧洲多个国家投资移民项目咨询与协助，全流程合法合规办理。</li>
+      <li><strong>国际义工：</strong> 独家资源对接，低成本、安全、真实可靠的志愿者项目，拓展国际视野。</li>
+      <li><strong>定制服务：</strong> 从贵族寄宿学校申请、家庭私人医生到商务陪同翻译，为高净值客户提供顶级专属服务。</li>
+    </ul>
+  </section>
+
+  <section id="advantages">
+    <h2>我们的优势 · Why SES</h2>
+    <ul>
+      <li>• 世界资源整合者：拥有多国教育与政商资源，信息掌握广泛深入。</li>
+      <li>• 包录取承诺：确保录取，助力客户无忧入学。</li>
+      <li>• 个性化方案设计：拒绝流水线操作，每个客户都是独一无二的存在。</li>
+      <li>• 全程跟进·无忧落地：从前期咨询到抵达后服务，全流程保障体验。</li>
+      <li>• 专业背景：团队由博士、行业专家与跨国从业者组成，实力保障。</li>
+    </ul>
+  </section>
+
+  <section id="testimonials">
+    <h2>客户评价 · Testimonials</h2>
+    <blockquote>“原本对留学一无所知，SES团队给了我清晰的规划和全程陪伴，真的非常感激！” —— 陈同学，葡萄牙某大学在读</blockquote>
+    <blockquote>“我们是一个家庭一起移民的，选SES是因为他们的真实、可靠、处理问题迅速。” —— 王女士，已落户里斯本</blockquote>
+    <blockquote>“国际义工项目太有意义了，不仅体验了异国文化，还认识了很多朋友！” —— Lucy，志愿者项目参与者</blockquote>
+  </section>
+
+  <section id="contact">
+    <h2>联系我们 · Contact Us</h2>
+    <p>微信/WhatsApp：（请填写联系方式）</p>
+    <p>邮箱：info@sesstudio.com</p>
+    <p>地址：葡萄牙 · 波尔图</p>
+    <p>公众号 / 视频号：赛斯工作室 SEStudio</p>
+    <p>也欢迎通过网页下方留言框联系我们，我们会在24小时内回复您的消息。</p>
     <form action="https://formspree.io/f/your-form-id" method="POST">
-      <label data-cn="姓名" data-en="Name">姓名</label>
-      <input type="text" name="name" required />
-      <label data-cn="邮箱" data-en="Email">邮箱</label>
-      <input type="email" name="email" required />
-      <label data-cn="留言内容" data-en="Message">留言内容</label>
-      <textarea name="message" rows="4" required></textarea>
-      <button type="submit" data-cn="提交" data-en="Submit">提交</button>
+      <input type="text" name="name" placeholder="姓名" required />
+      <input type="email" name="email" placeholder="邮箱" required />
+      <textarea name="message" rows="4" placeholder="留言内容" required></textarea>
+      <button type="submit">提交</button>
     </form>
-    <div style="margin-top:30px;">
-      <p data-cn="扫码添加微信：" data-en="Scan to add WeChat:">扫码添加微信：</p>
-      <img src="wechat.png" alt="WeChat QR Code" style="max-width:200px;">
-    </div>
   </section>
 
   <footer>
-    &copy; 2025 SEStudio 版权所有 ｜ All rights reserved.
+    &copy; 2025 赛斯工作室 SEStudio 版权所有
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
