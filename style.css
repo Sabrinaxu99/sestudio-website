@@ -69,3 +69,42 @@ footer {
   background:url('wechat.png') center/cover;
   border-radius:50%;
 }
+
+.testimonials-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  flex: 1;
+  min-width: 250px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.testimonial-card blockquote {
+  margin: 0;
+  padding: 0;
+  border-left: none;
+  font-style: normal;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.testimonial-card blockquote span {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #007bff;
+  font-size: 0.85rem;
+}
