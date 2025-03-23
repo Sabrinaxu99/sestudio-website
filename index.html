@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <script src="script.js" defer></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>赛斯工作室 SEStudio</title>
@@ -18,9 +17,11 @@
 
     nav {
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
+      gap: 30px;
       padding: 15px;
-      background-color: #f4f7fa;
+      background-color: #ffffff;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
       position: sticky;
       top: 0;
       z-index: 999;
@@ -29,7 +30,7 @@
     nav a {
       color: #555;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
       transition: color 0.3s;
     }
 
@@ -38,25 +39,48 @@
     }
 
     header.banner {
-      background: linear-gradient(to right, #007bff, #00c6ff);
-      text-align: center;
+      background: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?fit=crop&w=1600&q=80') no-repeat center center/cover;
       color: white;
-      padding: 80px 20px;
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
     }
 
-    header h1 { font-size: 2.8rem; }
-    header p { font-size: 1.2rem; }
+    header.banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin: 5px;
+    }
 
     section {
       max-width: 900px;
-      margin: 50px auto;
-      padding: 40px 20px;
+      margin: 60px auto;
+      padding: 40px;
       background-color: #fafbfd;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.05);
       opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
     }
 
     section.visible {
@@ -71,45 +95,20 @@
       padding-left: 10px;
     }
 
-    blockquote {
-      padding: 15px;
-      background-color: #fff;
-      border-left: 5px solid #007bff;
-      margin: 15px 0;
-      font-style: italic;
+    iframe {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: block;
+      margin: 0 auto;
     }
 
     footer {
       text-align: center;
-      padding: 25px;
-      background-color: #007bff;
-      color: #fff;
-    }
-
-    .language-selector {
-      position: fixed;
-      bottom: 90px;
-      right: 20px;
+      padding: 25px 0;
       background-color: #007bff;
       color: white;
-      padding: 8px 12px;
-      border-radius: 5px;
-      cursor: pointer;
-      z-index: 999;
-    }
-
-    .wechat-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 50px;
-      height: 50px;
-      background-image: url('wechat.png');
-      background-size: cover;
-      border-radius: 50%;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      cursor: pointer;
-      z-index: 999;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -125,49 +124,18 @@
 </nav>
 
 <header class="banner" id="home">
-  <h1 data-lang="title">赛斯工作室 SEStudio</h1>
-  <p data-lang="slogan">让每一个梦想，都被认真对待。</p>
-  <p data-lang="services">留学 · 移民 · 国际义工 · 高端定制服务</p>
+  <h1>赛斯工作室 SEStudio</h1>
+  <p>让每一个梦想，都被认真对待。</p>
+  <p>留学 · 移民 · 国际义工 · 高端定制服务</p>
 </header>
 
-<section id="about">
-  <h2 data-lang="about">我们是谁 · About SES</h2>
-  <p data-lang="aboutText1">赛斯工作室是一家总部位于葡萄牙的综合型中介机构。</p>
-  <p data-lang="aboutText2">我们致力于为客户提供包录取、全流程托管与高端定制化服务。</p>
-</section>
-
-<section id="services">
-  <h2 data-lang="coreServices">核心服务 · What We Do</h2>
-  <ul>
-    <li data-lang="service1">全球留学</li>
-    <li data-lang="service2">投资移民</li>
-    <li data-lang="service3">国际义工</li>
-    <li data-lang="service4">定制服务</li>
-  </ul>
-</section>
-
-<section id="advantages">
-  <h2 data-lang="advantages">我们的优势 · Why SES</h2>
-  <ul>
-    <li data-lang="adv1">世界资源整合者</li>
-    <li data-lang="adv2">包录取承诺</li>
-    <li data-lang="adv3">个性化方案设计</li>
-  </ul>
-</section>
-
-<section id="testimonials">
-  <h2 data-lang="testimonials">客户评价 · Testimonials</h2>
-  <blockquote data-lang="testimonial1">SES团队给了我清晰的规划。</blockquote>
-  <blockquote data-lang="testimonial2">真实、可靠、处理迅速。</blockquote>
-</section>
-
 <section id="contact">
-  <h2 data-lang="contact">联系我们 · Contact Us</h2>
-    <p>微信/WhatsApp：SESTUDIO-PT</p>
-    <p>邮箱：sestudio.pt@gmail.com</p>
-    <p>地址：葡萄牙 · 波尔图</p>
-    <p>公众号 / 视频号：赛斯工作室 SEStudio</p>
-    <p>也欢迎通过网页下方留言框联系我们，我们会在24小时内回复您的消息。</p>
+  <h2>联系我们 · Contact Us</h2>
+  <p>微信/WhatsApp：SESTUDIO-PT</p>
+  <p>邮箱： sestudio.pt@gmail.com</p>
+  <p>地址： 葡萄牙 · 波尔图</p>
+  <p>公众号 / 视频号： 赛斯工作室 SEStudio</p>
+  <p>也欢迎通过网页下方留言框联系我们，我们会在24小时内回复您的消息。</p>
   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeqhEGe2IZEfLzmLRcAXdBb2mwRl3T0jN-u00E3wM8kcWOkIw/viewform?embedded=true" height="1200"></iframe>
 </section>
 
@@ -175,23 +143,17 @@
   &copy; 2025 赛斯工作室 SEStudio
 </footer>
 
-<div class="language-selector" onclick="switchLanguage()">中文 / EN / PT</div>
-<div class="wechat-button"></div>
-
 <script>
-  window.addEventListener('scroll', function() {
-    document.querySelectorAll('section').forEach(sec => {
-      const rect = sec.getBoundingClientRect();
-      if(rect.top < window.innerHeight - 150){
-        sec.classList.add('visible');
+  window.addEventListener('scroll', () => {
+    document.querySelectorAll('section').forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        section.classList.add('visible');
       }
     });
   });
-
-  function switchLanguage() {
-    alert('多语言切换功能正在开发，敬请期待！');
-  }
 </script>
 
 </body>
 </html>
+
