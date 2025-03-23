@@ -4,51 +4,127 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>赛斯工作室 SEStudio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    .wechat-button {
-      position: fixed;
-      right: 30px;
-      bottom: 30px;
-      width: 60px;
-      height: 60px;
-      background-image: url('wechat.png');
-      background-size: cover;
-      border-radius: 50%;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      cursor: pointer;
-      z-index: 1000;
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Noto Sans SC', sans-serif;
+      background-color: #f9fafb;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header.banner {
+      background: linear-gradient(to right, #0072ff, #00c6ff);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    nav {
+      background-color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 15px;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #555;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #00c6ff;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      border-left: 5px solid #00c6ff;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+
+    blockquote {
+      background: #ffffff;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    iframe {
+      width: 100%;
+      border: none;
+      height: 1200px;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #0072ff;
+      color: white;
+      padding: 20px;
     }
 
     .lang-switch {
       position: fixed;
-      top: 15px;
-      right: 15px;
-      padding: 5px 10px;
-      background-color: #457B9D;
+      bottom: 100px;
+      right: 20px;
+      background-color: #0072ff;
       color: white;
+      padding: 10px 15px;
       border-radius: 4px;
       cursor: pointer;
-      z-index: 1000;
-      font-size: 14px;
+      z-index: 200;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
 
-    section {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
+    .wechat-button {
+      position: fixed;
+      bottom: 30px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      background-image: url('wechat.png');
+      background-size: cover;
+      cursor: pointer;
+      z-index: 200;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
   </style>
 </head>
 <body>
-
-<div class="lang-switch" onclick="toggleLanguage()">EN / 中文</div>
-<div class="wechat-button" onclick="window.open('wechat.png')"></div>
 
 <nav>
   <ul>
@@ -62,11 +138,9 @@
 </nav>
 
 <header class="banner" id="home">
-  <div class="overlay">
-    <h1>赛斯工作室 SEStudio</h1>
-    <p class="slogan">让每一个梦想，都被认真对待。</p>
-    <p class="sub-slogan">留学 · 移民 · 国际义工 · 高端定制服务</p>
-  </div>
+  <h1>赛斯工作室 SEStudio</h1>
+  <p>让每一个梦想，都被认真对待。</p>
+  <p>留学 · 移民 · 国际义工 · 高端定制服务</p>
 </header>
 
 <section id="about">
@@ -78,21 +152,21 @@
 <section id="services">
   <h2>核心服务 · What We Do</h2>
   <ul>
-    <li><strong>全球留学：</strong> 覆盖英国、美国、葡萄牙、澳大利亚、西班牙等热门国家，量身定制申请方案，支持包录取服务。</li>
-    <li><strong>投资移民：</strong> 提供欧洲多个国家投资移民项目咨询与协助，全流程合法合规办理。</li>
-    <li><strong>国际义工：</strong> 独家资源对接，低成本、安全、真实可靠的志愿者项目，拓展国际视野。</li>
-    <li><strong>定制服务：</strong> 从贵族寄宿学校申请、家庭私人医生到商务陪同翻译，为高净值客户提供顶级专属服务。</li>
+    <li>全球留学：覆盖英国、美国、葡萄牙、澳大利亚、西班牙等热门国家，量身定制申请方案，支持包录取服务。</li>
+    <li>投资移民：提供欧洲多个国家投资移民项目咨询与协助，全流程合法合规办理。</li>
+    <li>国际义工：独家资源对接，低成本、安全、真实可靠的志愿者项目，拓展国际视野。</li>
+    <li>定制服务：从贵族寄宿学校申请、家庭私人医生到商务陪同翻译，为高净值客户提供顶级专属服务。</li>
   </ul>
 </section>
 
 <section id="advantages">
   <h2>我们的优势 · Why SES</h2>
   <ul>
-    <li>世界资源整合者：拥有多国教育与政商资源，信息掌握广泛深入。</li>
-    <li>包录取承诺：确保录取，助力客户无忧入学。</li>
-    <li>个性化方案设计：拒绝流水线操作，每个客户都是独一无二的存在。</li>
-    <li>全程跟进·无忧落地：从前期咨询到抵达后服务，全流程保障体验。</li>
-    <li>专业背景：团队由博士、行业专家与跨国从业者组成，实力保障。</li>
+    <li>世界资源整合者</li>
+    <li>包录取承诺</li>
+    <li>个性化方案设计</li>
+    <li>全程跟进·无忧落地</li>
+    <li>专业背景</li>
   </ul>
 </section>
 
@@ -110,28 +184,17 @@
     <p>地址：葡萄牙 · 波尔图</p>
     <p>公众号 / 视频号：赛斯工作室 SEStudio</p>
     <p>也欢迎通过网页下方留言框联系我们，我们会在24小时内回复您的消息。</p>
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeqhEGe2IZEfLzmLRcAXdBb2mwRl3T0jN-u00E3wM8kcWOkIw/viewform?embedded=true"
-          width="100%" height="1181" frameborder="0" marginheight="0" marginwidth="0">正在加载…</iframe>
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeqhEGe2IZEfLzmLRcAXdBb2mwRl3T0jN-u00E3wM8kcWOkIw/viewform?embedded=true"></iframe>
 </section>
 
 <footer>
   &copy; 2025 赛斯工作室 SEStudio 版权所有
 </footer>
 
-<script>
-function toggleLanguage() {
-  alert('语言切换功能尚在开发中，敬请期待！');
-}
-
-window.addEventListener('scroll', function() {
-  document.querySelectorAll('section').forEach(sec => {
-    const rect = sec.getBoundingClientRect();
-    if(rect.top <= window.innerHeight * 0.75) {
-      sec.classList.add('visible');
-    }
-  });
-});
-</script>
+<div class="lang-switch">EN/中文</div>
+<div class="wechat-button"></div>
 
 </body>
 </html>
+
+
