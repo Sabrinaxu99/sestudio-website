@@ -27,8 +27,9 @@ const translations = {
     adv2: "包录取承诺",
     adv3: "个性化方案设计",
     testimonials: "客户评价 · Testimonials",
-    testimonial1: "SES团队给了我清晰的规划。",
-    testimonial2: "真实、可靠、处理迅速。",
+    testimonial1: "“原本对留学一无所知，SES团队给了我清晰的规划和全程陪伴，真的非常感激！” — 陈同学，葡萄牙某大学在读",
+    testimonial2: "“我们是一个家庭一起移民的，选SES是因为他们的真实、可靠、处理问题迅速。” — 王女士，已落户里斯本",
+    testimonial3: "“国际义工项目太有意义了，不仅体验了异国文化，还认识了很多朋友！” — Lucy，志愿者项目参与者",
     contact: "联系我们 · Contact Us"
   },
   en: {
@@ -48,8 +49,9 @@ const translations = {
     adv2: "Admission Guarantee",
     adv3: "Personalized Solutions",
     testimonials: "Testimonials",
-    testimonial1: "The SES team provided me with clear guidance.",
-    testimonial2: "Reliable, trustworthy, and efficient.",
+    testimonial1: "“I knew nothing about studying abroad. The SES team gave me clear guidance and support!” — Chen, Student in Portugal",
+    testimonial2: "“We immigrated as a family. SES was genuine, trustworthy, and efficient.” — Mrs. Wang, settled in Lisbon",
+    testimonial3: "“The volunteer program was amazing. I experienced different cultures and made great friends!” — Lucy, volunteer",
     contact: "Contact Us"
   },
   pt: {
@@ -69,8 +71,9 @@ const translations = {
     adv2: "Garantia de Admissão",
     adv3: "Soluções Personalizadas",
     testimonials: "Depoimentos",
-    testimonial1: "A equipe da SES me forneceu orientação clara.",
-    testimonial2: "Confiável e eficiente.",
+    testimonial1: "“Eu não sabia nada sobre estudar fora. A SES me deu orientação clara e apoio!” — Chen, Estudante em Portugal",
+    testimonial2: "“Imigramos como família. SES foi verdadeira, confiável e eficiente.” — Sra. Wang, residente em Lisboa",
+    testimonial3: "“O programa de voluntariado foi incrível. Experimentei culturas diferentes e fiz ótimos amigos!” — Lucy, voluntária",
     contact: "Contate-nos"
   }
 };
@@ -84,7 +87,5 @@ function switchLanguage() {
     el.innerText = translations[currentLang][key];
   });
 }
-  
+
 document.querySelector('.language-selector').addEventListener('click', switchLanguage);
-
-
